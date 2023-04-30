@@ -16,5 +16,13 @@
     "eslint": "^8.39.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Darkon96/frontend-project-46.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Darkon96/frontend-project-46/issues"
+  },
+  "homepage": "https://github.com/Darkon96/frontend-project-46#readme"
 }
