@@ -22,9 +22,11 @@
   "homepage": "https://github.com/Darkon96/frontend-project-46#readme",
   "dependencies": {
     "commander": "^11.1.0",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-defaults": "^9.0.0",

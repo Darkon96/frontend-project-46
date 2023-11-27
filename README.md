@@ -5,3 +5,4 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6f295911572031df65d2/test_coverage)](https://codeclimate.com/github/Darkon96/frontend-project-46/test_coverage)
 
 [![asciicast](https://asciinema.org/a/5BhTBs7wKahFfmdeYmgwSPE8X.svg)](https://asciinema.org/a/5BhTBs7wKahFfmdeYmgwSPE8X)
+[![asciicast](https://asciinema.org/a/EBLjycNNkamBJFeFFImawbiJL.svg)](https://asciinema.org/a/EBLjycNNkamBJFeFFImawbiJL)
