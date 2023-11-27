@@ -8,6 +8,9 @@ publish:
 lint: 
 	npx eslint .
 
+lint-fix:
+	npx eslint . --fix
+
 test:
 	npx -n --experimental-vm-modules jest
 
