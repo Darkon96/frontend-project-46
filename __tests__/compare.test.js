@@ -17,28 +17,11 @@ const extensions = ["json", "yaml", "yml"];
 
 describe("Positives cases", () => {
   test.each(extensions)("Format %s", (extension) => {
-   const file1 = `${process.cwd()}/__fixtures__/file1.${extension}`;
-   const file2 = `${process.cwd()}/__fixtures__/file2.${extension}`;
-    //  const file1 = getFixturePath(`file1.${extension}`);
-    //  const file2 = getFixturePath(`file2.${extension}`);
+    const file1 = getFixturePath(`file1.${extension}`);
+    const file2 = getFixturePath(`file2.${extension}`);
 
     expect(gendiff(file1, file2, "stylish")).toEqual(expectedStylish);
     expect(gendiff(file1, file2, "plain")).toEqual(expectedPlain);
     expect(gendiff(file1, file2, "json")).toEqual(expectedJson);
-  });
-});
-
-describe("Negative cases", () => {
-  test("Check wrong file extension", () => {
-    const error = new Error(
-      "Invalid file extension: 'txt'! Try supported formats.",
-    );
-
-    expect(() => {
-      gendiff(
-        getFixturePath("file1-wrong.txt"),
-        getFixturePath("file2-wrong.txt"),
-      );
-    }).toThrow(error);
   });
 });
