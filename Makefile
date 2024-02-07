@@ -1,15 +1,17 @@
 install:
-	npm ci
-	npm link
+	sudo npm ci
+	sudo npm link
 	
 publish: 
 	npm publish --dry-run
 
-lint: 
+lint:
 	npx eslint .
+	npx prettier . --check
 
-lint-fix:
+lintFix:
 	npx eslint . --fix
+	npx prettier . --write
 
 test:
 	npx -n --experimental-vm-modules jest
@@ -17,5 +19,5 @@ test:
 test-watch:
 	npm test -s -- --watch
 
-test-coverage: # Run coverage tests
+test-coverage:
 	npm test -- --coverage --coverageProvider=v8
