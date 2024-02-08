@@ -113,9 +113,9 @@ Difference Calculator is a program that determines the difference between two da
 
 ## Utility Features
 
-Support for different input formats: `yaml`, `json'.
+Support for different input formats: `yaml`, `json`.
 
-Generating a report in the form of `stylish', `plain text` and `json'.
+Generating a report in the form of `stylish`, `plain text` and `json`.
 
 ## Installation 
 ```
