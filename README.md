@@ -94,16 +94,13 @@ make lintFix
 
 ### Стек технологий:
 
-JavaScript, NodeJS, Git, npm, ESLint, Codeclimate
+JavaScript, NodeJS, Git, npm, ESLint, Codeclimate, Jest
 
 ### Полученные навыки:
 
-- Настройка окружения: VSCode, node.js, npm, ESLint :heavy_check_mark:
-- Работа с Git и Github :heavy_check_mark:
-- Интеграция CodeClimate :heavy_check_mark:
-- Подключение дополнительных библиотек(lodash, readlineSync) :heavy_check_mark:
-- Построение архитектуры проекта :heavy_check_mark:
-- Поддержка единого стиля кодирования Airbnb :heavy_check_mark:
+- Структуры данных и Алгоритмы: работа с древовидными структурами данных и рекурсивными алгоритмами :heavy_check_mark:
+- Тестирование и отладка: Jest, TDD,  GitHub Actions :heavy_check_mark:
+- Архитектура: Модульность, абстракции, библиотека для построения cli приложений: commander.js :heavy_check_mark:
 
 ### Description
 
@@ -142,7 +139,7 @@ Congratulations, Roman!
 
 ### Stack:
 
-JavaScript, NodeJS, Git, npm, ESLint, Codeclimate
+JavaScript, NodeJS, Git, npm, ESLint, Codeclimate, Jest
 
 ### Get Skills:
 
