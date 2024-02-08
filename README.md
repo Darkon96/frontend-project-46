@@ -80,7 +80,7 @@ make test-coverage
 ```
 make lint
 ```
-# --fix
+### Eslint --fix
 ```
 make lintFix
 ```
