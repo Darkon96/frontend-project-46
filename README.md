@@ -22,6 +22,21 @@
 ```
 make install
 ```
+## Запуск тестов
+```
+make test
+```
+```
+make test-coverage
+```
+## Запуск Eslint
+```
+make lint
+```
+### Eslint --fix
+```
+make lintFix
+```
 
 ## Пример использования
 ```bash
@@ -82,29 +97,6 @@ gendiff --format json __fixtures__/file1.json __fixtures__/file2.json
 ```
 [![asciicast](https://asciinema.org/a/cEf7uI9mlB2nDOSW8yK80Uwlo.svg)](https://asciinema.org/a/cEf7uI9mlB2nDOSW8yK80Uwlo)
 
-## Запуск тестов
-```
-make test
-```
-```
-make test-coverage
-```
-## Запуск Eslint
-```
-make lint
-```
-### Eslint --fix
-```
-make lintFix
-```
-### Демонстрации: / Demonstrations:
-
-
-
-
-
-
-
 ### Стек технологий:
 
 JavaScript, NodeJS, Git, npm, ESLint, Codeclimate, Jest
@@ -117,38 +109,94 @@ JavaScript, NodeJS, Git, npm, ESLint, Codeclimate, Jest
 
 ### Description
 
-Brain Games is a set of 5 console games built on the principle of popular mobile applications for brain pumping. Each game asks questions that need to be answered correctly. After three correct answers, it is considered that the game is over. Incorrect answers end the game and offer to go through it again.
+Difference Calculator is a program that determines the difference between two data structures. This is a popular task, for which there are many online services, for example http://www.jsondiff.com /. A similar mechanism is used when outputting tests or when automatically tracking changes in configuration files.
 
-Games:
+### Utility Features
 
-- Calculator. Arithmetic expressions that need to be calculated.
-- Progression. Search for missing numbers in a sequence of numbers.
-- Definition of an even number.
-- Determination of the greatest common divisor.
-- Definition of a prime number.
+Support for different input formats: `yaml`, `json'.
 
-Example:
+Generating a report in the form of `stylish', `plain text` and `json'.
+
+## Installation 
+```
+make install
+```
+## Running tests
+```
+make test
+```
+```
+make test-coverage
+```
+## Run Eslint
+```
+make lint
+```
+### Eslint --fix
+```
+make lintFix
+```
+
+## Usage example
+```bash
+gendiff -h
+Usage: gendiff [options] <filepath1> <filepath2>
+
+Compares two configuration files and shows a difference.
+
+Arguments:
+  filepath1            relative or absolute path to the file
+  filepath2            relative or absolute path to the file
+
+Options:
+  -V, --version        output the version number
+  -f, --format <type>  output format
+  -h, --help           display help for command
+```
+[![asciicast](https://asciinema.org/a/5BhTBs7wKahFfmdeYmgwSPE8X.svg)](https://asciinema.org/a/5BhTBs7wKahFfmdeYmgwSPE8X)
+
+Format: `stylish` (default)
+```bash
+gendiff filepath1.json filepath2.json
+
+{
+  + follow: false
+    setting1: Value 1
+  - setting2: 200
+  - setting3: true
+  + setting3: {
+        key: value
+    }
+  + setting4: blah blah
+  + setting5: {
+        key5: value5
+    }
+}
 
 ```
-$ brain-progression
 
-Welcome to the Brain Game!
-What number is missing in this progression?
+[![asciicast](https://asciinema.org/a/EBLjycNNkamBJFeFFImawbiJL.svg)](https://asciinema.org/a/EBLjycNNkamBJFeFFImawbiJL)
+[![asciicast](https://asciinema.org/a/5pFc7yPmlKbqxhTzh0sHMIxPD.svg)](https://asciinema.org/a/5pFc7yPmlKbqxhTzh0sHMIxPD)
+Format: `plain`
+```bash
+gendiff --format plain path/to/file.yml another/path/file.json
 
-May I have your name? Roman
-Hello, Roman!
+Property 'common.follow' was added with value: false
+Property 'group1.baz' was updated. From 'bas' to 'bars'
+Property 'group2' was removed
 
-Question: 14 .. 18 20 22 24 26 28
-Your answer: 16 # The user enters the answer
-Correct!
-Question: 5 6 7 8 9 .. 11 12
-Your answer: 10 # The user enters the answer
-Correct!
-Question: 12 15 18 21 .. 27 30 33
-Your answer: 24 # The user enters the answer
-Correct!
-Congratulations, Roman!
 ```
+[![asciicast](https://asciinema.org/a/g4sktCqzLZNVmrdZugv9VXYNd.svg)](https://asciinema.org/a/g4sktCqzLZNVmrdZugv9VXYNd)
+Format: `json`
+```bash
+gendiff --format json __fixtures__/file1.json __fixtures__/file2.json
+
+[{"key":"common","state":"nested","value":[{"key":"follow","state":"added","value":false},{"key":"setting1","state":"notChanged","value":"Value 1"},{"key":"setting2","state":"deleted","value":200},{"key":"setting3","state":"changed","value1":true,"value2":null},{"key":"setting4","state":"added","value":"blah blah"},{"key":"setting5","state":"added","value":{"key5":"value5"}},{"key":"setting6","state":"nested","value":[{"key":"doge","state":"nested","value":[{"key":"wow","state":"changed","value1":"","value2":"so much"}]},{"key":"key","state":"notChanged","value":"value"},{"key":"ops","state":"added","value":"vops"}]}]},{"key":"group1","state":"nested","value":[{"key":"baz","state":"changed","value1":"bas","value2":"bars"},{"key":"foo","state":"notChanged","value":"bar"},{"key":"nest","state":"changed","value1":{"key":"value"},"value2":"str"}]},{"key":"group2","state":"deleted","value":{"abc":12345,"deep":{"id":45}}},{"key":"group3","state":"added","value":{"deep":{"id":{"number":45}},"fee":100500}}]
+
+```
+[![asciicast](https://asciinema.org/a/cEf7uI9mlB2nDOSW8yK80Uwlo.svg)](https://asciinema.org/a/cEf7uI9mlB2nDOSW8yK80Uwlo)
+
+
 
 ### Stack:
 
