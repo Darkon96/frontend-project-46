@@ -27,7 +27,7 @@ const makeStylish = (diff, replacer = '    ') => {
 
     const makeLine = (value, mark) => `${indentForSign}${mark} ${node.key}: ${stringify(value, depth, replacer)}`;
 
-    switch (node.state) {
+    switch (node.typeOfDifference) {
       case 'added':
         return makeLine(node.value, sign.added);
       case 'deleted':
@@ -42,7 +42,7 @@ const makeStylish = (diff, replacer = '    ') => {
       case 'nested':
         return `${indent}${node.key}: ${['{', ...iter(node.value, depth + 1), `${indent}}`].join('\n')}`;
       default:
-        throw new Error(`Type: ${node.state} is undefined`);
+        throw new Error(`Type: ${node.typeOfDifference} is undefined`);
     }
   });
 
