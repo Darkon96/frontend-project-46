@@ -107,11 +107,13 @@ JavaScript, NodeJS, Git, npm, ESLint, Codeclimate, Jest
 - Тестирование и отладка: Jest, TDD,  GitHub Actions :heavy_check_mark:
 - Архитектура: Модульность, абстракции, библиотека для построения cli приложений: commander.js :heavy_check_mark:
 
-### Description
+
+
+## Description
 
 Difference Calculator is a program that determines the difference between two data structures. This is a popular task, for which there are many online services, for example http://www.jsondiff.com /. A similar mechanism is used when outputting tests or when automatically tracking changes in configuration files.
 
-### Utility Features
+## Utility Features
 
 Support for different input formats: `yaml`, `json'.
 
