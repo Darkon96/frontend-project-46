@@ -7,11 +7,9 @@ publish:
 
 lint:
 	npx eslint .
-	npx prettier . --check
 
 lintFix:
 	npx eslint . --fix
-	npx prettier . --write
 
 test:
 	npx -n --experimental-vm-modules jest
