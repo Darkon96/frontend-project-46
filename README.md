@@ -74,13 +74,18 @@ gendiff filepath1.json filepath2.json
 make test
 ```
 ```
+test-watch
+```
+```
 make test-coverage
 ```
 ## Запуск Eslint
 ```
 make lint
 ```
-
+```
+make lintFix
+```
 ### Демонстрации: / Demonstrations:
 
 [![asciicast](https://asciinema.org/a/5BhTBs7wKahFfmdeYmgwSPE8X.svg)](https://asciinema.org/a/5BhTBs7wKahFfmdeYmgwSPE8X)
